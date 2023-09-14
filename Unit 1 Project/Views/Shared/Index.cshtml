@@ -1,0 +1,16 @@
+﻿
+@model CubeModel
+
+@{
+    Layout = "";
+}
+
+<form asp-action="Results">
+    <h1>Find the Cubic Area Of a Cube</h1>
+    <label for="length"></label>
+    <input asp-for="length" type="text"/>
+    <label for="width"></label>
+    <input asp-for="width" type="text"/>
+    <label for="height"></label>
+    <input asp-for="height" name="height"/>
+</form>
