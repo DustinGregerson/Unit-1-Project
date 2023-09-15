@@ -4,13 +4,21 @@
 @{
     Layout = "";
 }
-
-<form asp-action="Results">
-    <h1>Find the Cubic Area Of a Cube</h1>
-    <label for="length"></label>
-    <input asp-for="length" type="text"/>
-    <label for="width"></label>
-    <input asp-for="width" type="text"/>
-    <label for="height"></label>
-    <input asp-for="height" name="height"/>
-</form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cubic Area Calculator</title>
+</head>
+<body>
+        <form asp-action="Results">
+        <h1>Find the Cubic Area Of a Cube</h1>
+        <label for="length">Length</label>
+        <input asp-for="length" type="text"/>
+        <label for="width">Width</label>
+        <input asp-for="width" type="text"/>
+        <label for="height">Height</label>
+        <input asp-for="height" name="height"/>
+        <input type="submit" />
+        <input type="reset" />
+    </form>
+</body>

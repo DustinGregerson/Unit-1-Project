@@ -8,7 +8,7 @@ namespace Unit_1_Project.Controllers
         {
             return View();
         }
-        public IActionResult Display(CubeModel model)
+        public IActionResult Results(CubeModel model)
         {
             return View(model);
         }

@@ -4,6 +4,31 @@
     Layout = "";
 }
 
-<div>
-    @Model.width
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cubic Area Calculator</title>
+</head>
+<body>
+
+    @{
+        Model.ValidateStrings();
+
+    }
+   
+    @if (Model.bitFlags > 0) {
+        <div id="errorMessages">@Html.Raw(Model.ErrorMessageParser())</div>
+    }
+    else
+    {
+        <div id="entered_input">
+            <div>width=@Model.width</div>
+            <div>height=@Model.height</div>
+            <div>length=@Model.length</div>
+            <div>cubic area = @Model.calcCube()</div>
+        </div>
+    }
+    
+    
+
+</body>
