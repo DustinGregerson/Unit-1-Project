@@ -89,7 +89,7 @@ namespace Unit_1_Project.Models
 
         public string ErrorMessageParser()
         {
-            //data is cuncked to 2 bits per chunk
+            //data is chuncked to 2 bits per chunk
             //01 is a null error
             //10 is a regex fail
 
