@@ -20,8 +20,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+//Had to set this to the Cube controller for initial routing.
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Cube}/{action=Index}/{id?}");
+
 
 app.Run();

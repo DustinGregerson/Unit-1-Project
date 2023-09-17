@@ -1,0 +1,61 @@
+﻿/*
+   Author: Dustin Gregerson
+   Date: 9/16/2023
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color:aliceblue;
+}
+#cube_area_form{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:10%;
+    background-color:white;
+}
+#cube_area_form div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+    #cube_area_form div label{
+        width:25%;
+        border-bottom: 2px solid black;
+    }
+    #cube_area_form div input{
+        width:75%;
+    }
+
+
+#cube_area_form h1 {
+        text-align:center;
+        width:100%;
+        border-bottom:2px solid black;
+        font-size:1.5em;
+}
+#error_messages {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    background-color: white;
+}
+#entered_input_and_results {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    background-color: white;
+}
+

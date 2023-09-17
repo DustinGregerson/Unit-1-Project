@@ -1,34 +1,39 @@
 ﻿@model CubeModel
 
+<!--
+    Author: Dustin Gregerson
+    Date: 9/16/22
+    Description:
+
+    Outputs a error message or the cubic area to the user
+
+-->
+
 @{
-    Layout = "";
+    ViewBag.Title = "Results";
 }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cubic Area Calculator</title>
-</head>
 <body>
-
     @{
         Model.ValidateStrings();
 
     }
-   
+    <!-- Error message segment -->
     @if (Model.bitFlags > 0) {
-        <div id="errorMessages">@Html.Raw(Model.ErrorMessageParser())</div>
+            <div id="error_messages">
+            <h1>Error</h1>
+            @Html.Raw(Model.ErrorMessageParser())
+            </div>
     }
     else
+    // results segment
     {
-        <div id="entered_input">
+        <div id="entered_input_and_results">
+            <h1>Results</h1>
             <div>width=@Model.width</div>
             <div>height=@Model.height</div>
             <div>length=@Model.length</div>
             <div>cubic area = @Model.calcCube()</div>
         </div>
     }
-    
-    
-
 </body>

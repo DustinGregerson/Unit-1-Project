@@ -1,24 +1,36 @@
 ﻿
 @model CubeModel
 
+<!--
+    Author: Dustin Gregerson
+    Date: 9/16/22
+    Description:
+
+    Collects infomation from the user to find the cubic area of a cube
+    when the user hits submit the CubeControler routs the browser to the Results page
+-->
+
 @{
-    Layout = "";
+    ViewBag.Title = "Calculate Cubic Area From";
 }
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cubic Area Calculator</title>
-</head>
-<body>
-        <form asp-action="Results">
-        <h1>Find the Cubic Area Of a Cube</h1>
-        <label for="length">Length</label>
-        <input asp-for="length" type="text"/>
-        <label for="width">Width</label>
-        <input asp-for="width" type="text"/>
-        <label for="height">Height</label>
-        <input asp-for="height" name="height"/>
-        <input type="submit" />
-        <input type="reset" />
+
+    <form asp-action="Results" id="cube_area_form">
+        <h1>Find the Area Of a Cube</h1>
+        <div>
+            <label for="length">Length</label>
+            <input asp-for="length" type="text"/>
+        </div>
+        <div>
+            <label for="width">Width</label>
+            <input asp-for="width" type="text"/>
+        </div>
+        <div>
+            <label for="height">Height</label>
+            <input asp-for="height" name="height"/>
+        </div>
+        <div id="button_pane">
+            <input type="submit" />
+            <input type="reset" />
+        </div>
     </form>
-</body>
+
